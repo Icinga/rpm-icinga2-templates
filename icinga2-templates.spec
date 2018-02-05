@@ -13,7 +13,7 @@ URL:            https://icinga.com
 Source0:        https://github.com/Icinga/%{source_name}/archive/v%{version}.tar.gz
 BuildArch:      noarch
 
-Conflicts:      icinga2-common << 2.9.0
+Conflicts:      icinga2-common < 2.9.0
 
 %description
 Icinga Template Library for Icinga 2
@@ -30,6 +30,7 @@ DESTDIR="%{buildroot}" ./install.sh
 %files
 %defattr(-,root,root)
 %{_datadir}/icinga2/include
+%doc README.md doc/
 
 %changelog
 * Mon Feb 05 2018 Markus Frosch <markus.frosch@icinga.com> 0.0.0-1
