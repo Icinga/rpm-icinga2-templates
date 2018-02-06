@@ -14,7 +14,8 @@ Source0:        https://github.com/Icinga/%{source_name}/archive/v%{version}.tar
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
-Conflicts:      icinga2-common < 2.9.0
+# TODO: re-enable before offically releasing ITL package
+#Conflicts:      icinga2-common < 2.9.0
 
 %description
 Icinga Template Library for Icinga 2
