@@ -12,6 +12,7 @@ License:        GPLv2+
 URL:            https://icinga.com
 Source0:        https://github.com/Icinga/%{source_name}/archive/v%{version}.tar.gz
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 Conflicts:      icinga2-common < 2.9.0
 
@@ -20,9 +21,6 @@ Icinga Template Library for Icinga 2
 
 %prep
 %setup -q
-
-%build
-# noop
 
 %install
 DESTDIR="%{buildroot}" ./install.sh
